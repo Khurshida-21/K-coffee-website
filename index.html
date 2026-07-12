@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Haven - Artisan Coffee Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-icon">☕</span>
+                <span class="logo-text">Brew Haven</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="cart-icon" id="cartIcon">
+                <span class="cart-emoji">🛒</span>
+                <span class="cart-count" id="cartCount">Cart (0)</span>
+            </div>
+            <div class="favorites-icon" id="favoritesIcon">
+                <span class="favorites-emoji">🤍</span>
+                <span class="favorites-count" id="favoritesCount">Favorites (0)</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title fade-in">
+                Welcome to <span class="highlight">Brew Haven</span>
+            </h1>
+            <p class="hero-subtitle fade-in">Experience the Art of Perfect Coffee</p>
+            <p class="hero-description fade-in">
+                Handcrafted beverages made with passion, using the finest beans from around the world.
+            </p>
+            <div class="hero-buttons fade-in">
+                <a href="#menu" class="btn btn-primary">Explore Menu</a>
+                <a href="#contact" class="btn btn-secondary">Visit Us</a>
+            </div>
+        </div>
+        <div class="hero-image fade-in">
+            <img src="Images/Hero cup.png" alt="Hero Coffee Cup" class="hero-coffee-image">
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title slide-up">Our Menu</h2>
+            <p class="section-subtitle slide-up">Discover our carefully crafted selections</p>
+            
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="coffee">Coffee</button>
+                <button class="category-btn" data-category="specialty">Specialty</button>
+                <button class="category-btn" data-category="pastries">Pastries</button>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-item slide-up" data-category="coffee" data-item-id="classic-espresso">
+                    <button class="favorite-btn" aria-label="Add to favorites">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <div class="menu-item-image">
+                        <img src="Images/Classic Espresso.png" alt="Classic Espresso" class="menu-image">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Classic Espresso</h3>
+                        <p>Rich and bold single or double shot</p>
+                        <div class="menu-item-footer">
+                            <span class="price">$3.50</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item slide-up" data-category="coffee" data-item-id="cappuccino">
+                    <button class="favorite-btn" aria-label="Add to favorites">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <div class="menu-item-image">
+                        <img src="Images/Cappuccino.png" alt="Cappuccino" class="menu-image">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Cappuccino</h3>
+                        <p>Espresso with steamed milk and foam</p>
+                        <div class="menu-item-footer">
+                            <span class="price">$4.50</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item slide-up" data-category="specialty" data-item-id="caramel-macchiato">
+                    <button class="favorite-btn" aria-label="Add to favorites">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <div class="menu-item-image">
+                        <img src="Images/Caramel Macchiato.png" alt="Caramel Macchiato" class="menu-image">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Caramel Macchiato</h3>
+                        <p>Vanilla, steamed milk, espresso, caramel</p>
+                        <div class="menu-item-footer">
+                            <span class="price">$5.50</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item slide-up" data-category="specialty" data-item-id="mocha-delight">
+                    <button class="favorite-btn" aria-label="Add to favorites">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <div class="menu-item-image">
+                        <img src="Images/Mocha Delight.png" alt="Mocha Delight" class="menu-image">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Mocha Delight</h3>
+                        <p>Chocolate, espresso, steamed milk, whip</p>
+                        <div class="menu-item-footer">
+                            <span class="price">$5.75</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item slide-up" data-category="pastries" data-item-id="butter-croissant">
+                    <button class="favorite-btn" aria-label="Add to favorites">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <div class="menu-item-image">
+                        <img src="Images/Butter Croissant.png" alt="Butter Croissant" class="menu-image">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Butter Croissant</h3>
+                        <p>Flaky, buttery, freshly baked</p>
+                        <div class="menu-item-footer">
+                            <span class="price">$3.75</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item slide-up" data-category="pastries" data-item-id="blueberry-muffin">
+                    <button class="favorite-btn" aria-label="Add to favorites">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <div class="menu-item-image">
+                        <img src="Images/Blueberry Muffin.png" alt="Blueberry Muffin" class="menu-image">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Blueberry Muffin</h3>
+                        <p>Fresh blueberries, moist and sweet</p>
+                        <div class="menu-item-footer">
+                            <span class="price">$3.25</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title slide-up">About Us</h2>
+            <div class="about-content">
+                <div class="about-text slide-up">
+                    <h3>Our Story</h3>
+                    <p>
+                        Founded in 2015, Brew Haven started as a small passion project with a simple mission: 
+                        to serve exceptional coffee in a warm, welcoming environment. What began as a single 
+                        location has grown into a beloved community hub where coffee enthusiasts gather.
+                    </p>
+                    <p>
+                        We source our beans directly from sustainable farms in Ethiopia, Colombia, and Guatemala, 
+                        ensuring fair trade practices and the highest quality. Each cup is crafted with precision 
+                        and care by our skilled baristas.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h4 class="stat-number" data-target="9">0</h4>
+                            <p>Years of Excellence</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 class="stat-number" data-target="50">0</h4>
+                            <p>Bean Origins</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 class="stat-number" data-target="10000">0</h4>
+                            <p>Happy Customers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image slide-up">
+                    <img src="Images/aesthetic cafe.jfif" alt="Aesthetic Café Interior" class="about-cafe-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title slide-up">Gallery</h2>
+            <p class="section-subtitle slide-up">A glimpse into our world</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item slide-up" data-category="interior">
+                    <img src="Images/Cozy Interior.png" alt="Cozy Interior" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Cozy Interior</h4>
+                        <p>Warm and inviting atmosphere</p>
+                    </div>
+                </div>
+                <div class="gallery-item slide-up" data-category="coffee">
+                    <img src="Images/Artisan Coffee.png" alt="Artisan Coffee" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Artisan Coffee</h4>
+                        <p>Expertly crafted beverages</p>
+                    </div>
+                </div>
+                <div class="gallery-item slide-up" data-category="food">
+                    <img src="Images/Fresh Pastries.png" alt="Fresh Pastries" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Fresh Pastries</h4>
+                        <p>Baked fresh daily</p>
+                    </div>
+                </div>
+                <div class="gallery-item slide-up" data-category="team">
+                    <img src="Images/Our Team.png" alt="Our Team" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Our Team</h4>
+                        <p>Passionate baristas</p>
+                    </div>
+                </div>
+                <div class="gallery-item slide-up" data-category="coffee">
+                    <img src="Images/Latte Art.png" alt="Latte Art" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Latte Art</h4>
+                        <p>Beautiful in every cup</p>
+                    </div>
+                </div>
+                <div class="gallery-item slide-up" data-category="interior">
+                    <img src="Images/Garden Seating.png" alt="Garden Seating" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Garden Seating</h4>
+                        <p>Relax in nature</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title slide-up">Contact Us</h2>
+            <p class="section-subtitle slide-up">We'd love to hear from you</p>
+            
+            <div class="contact-content">
+                <div class="contact-info slide-up">
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>123 Coffee Street<br>Downtown, CA 90210</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>(555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>hello@brewhaven.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🕐</div>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon-Fri: 6am - 8pm<br>Sat-Sun: 7am - 9pm</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form slide-up" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">☕</span>
+                    <span class="logo-text">Brew Haven</span>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link">FB</a>
+                    <a href="#" class="social-link">IG</a>
+                    <a href="#" class="social-link">TW</a>
+                </div>
+                <p class="copyright">© 2024 Brew Haven. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-sidebar-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-sidebar-content" id="cartSidebarContent">
+            <p class="empty-cart-message">Your cart is empty.</p>
+        </div>
+        <div class="cart-sidebar-footer" id="cartSidebarFooter" style="display: none;">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price" id="totalPrice">$0.00</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Favorites Modal -->
+    <div class="favorites-modal" id="favoritesModal">
+        <div class="favorites-modal-content">
+            <div class="favorites-modal-header">
+                <h3>My Favorites</h3>
+                <button class="close-favorites" id="closeFavorites">&times;</button>
+            </div>
+            <div class="favorites-modal-body" id="favoritesModalBody">
+                <div class="empty-favorites-message">
+                    <span class="empty-favorites-icon">🤍</span>
+                    <h4>No favorites yet</h4>
+                    <p>Start exploring our delicious menu.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="favorites-overlay" id="favoritesOverlay"></div>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-modal-content">
+            <div class="checkout-modal-header">
+                <h2>Checkout</h2>
+                <button class="close-checkout" id="closeCheckout">&times;</button>
+            </div>
+            <div class="checkout-modal-body">
+                <form id="checkoutForm">
+                    <!-- Customer Details Section -->
+                    <div class="checkout-section">
+                        <h3>Customer Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                                <span class="error-message" id="fullNameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phoneNumber">Phone Number *</label>
+                                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                                <span class="error-message" id="phoneNumberError"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkoutEmail">Email Address *</label>
+                            <input type="email" id="checkoutEmail" name="email" required>
+                            <span class="error-message" id="checkoutEmailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Delivery Address *</label>
+                            <input type="text" id="address" name="address" required>
+                            <span class="error-message" id="addressError"></span>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City *</label>
+                                <input type="text" id="city" name="city" required>
+                                <span class="error-message" id="cityError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="pinCode">PIN Code *</label>
+                                <input type="text" id="pinCode" name="pinCode" required>
+                                <span class="error-message" id="pinCodeError"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method Section -->
+                    <div class="checkout-section">
+                        <h3>Payment Method</h3>
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="upi" required>
+                                <span class="payment-label">UPI</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="card" required>
+                                <span class="payment-label">Debit/Credit Card</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="cod" required>
+                                <span class="payment-label">Cash on Delivery</span>
+                            </label>
+                        </div>
+
+                        <!-- UPI Fields -->
+                        <div class="payment-fields" id="upiFields" style="display: none;">
+                            <div class="form-group">
+                                <label for="upiId">UPI ID *</label>
+                                <input type="text" id="upiId" name="upiId" placeholder="example@upi">
+                                <span class="error-message" id="upiIdError"></span>
+                            </div>
+                        </div>
+
+                        <!-- Card Fields -->
+                        <div class="payment-fields" id="cardFields" style="display: none;">
+                            <div class="form-group">
+                                <label for="cardNumber">Card Number *</label>
+                                <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                                <span class="error-message" id="cardNumberError"></span>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiryDate">Expiry Date *</label>
+                                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5">
+                                    <span class="error-message" id="expiryDateError"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV *</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3">
+                                    <span class="error-message" id="cvvError"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order Summary Section -->
+                    <div class="checkout-section">
+                        <h3>Order Summary</h3>
+                        <div id="orderSummaryItems"></div>
+                        <div class="order-summary-totals">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span id="checkoutSubtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Delivery Charge:</span>
+                                <span class="free-delivery">FREE</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total:</span>
+                                <span id="checkoutTotal">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="place-order-btn" id="placeOrderBtn" disabled>
+                        Place Order
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div class="confirmation-modal" id="confirmationModal">
+        <div class="confirmation-modal-content">
+            <div class="confirmation-header">
+                <div class="success-icon">🎉</div>
+                <h2>Congratulations!</h2>
+                <p class="success-message">Your order has been placed successfully.</p>
+            </div>
+            <div class="confirmation-body">
+                <div class="confirmation-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Order ID:</span>
+                        <span class="detail-value" id="orderId">#BH-000000</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Estimated Preparation Time:</span>
+                        <span class="detail-value">15-20 minutes</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Payment Method:</span>
+                        <span class="detail-value" id="paymentMethodDisplay">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Total Amount:</span>
+                        <span class="detail-value total-amount" id="finalTotal">$0.00</span>
+                    </div>
+                </div>
+                <p class="thank-you-message">Thank you for choosing Brew Haven! ☕</p>
+            </div>
+            <div class="confirmation-actions">
+                <button class="btn btn-primary" id="continueShoppingBtn">Continue Shopping</button>
+                <button class="btn btn-secondary" id="downloadReceiptBtn">Download Receipt</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
